@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">midnight.server — let’s make good things</title>
+  <desc id="desc">A starry midnight sky, a glowing sunrise, and a terminal asking: build a website and make it pink.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111329"/><stop offset=".58" stop-color="#17152f"/><stop offset="1" stop-color="#281b3e"/></linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffbfdc"/><stop offset="1" stop-color="#ff8fbe"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a6d9ff"/><stop offset="1" stop-color="#829bff"/></linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff0ae"/><stop offset="1" stop-color="#ff9fba"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#a184ff" stop-opacity=".3"/><stop offset="1" stop-color="#a184ff" stop-opacity="0"/></radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="30"/></filter>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#050611" flood-opacity=".5"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="0" fill="url(#sky)"/>
+  <ellipse cx="900" cy="330" rx="390" ry="300" fill="url(#glow)"/>
+  <g fill="#f4edff" opacity=".85"><circle cx="68" cy="116" r="2"/><circle cx="341" cy="86" r="2"/><circle cx="575" cy="68" r="1.6"/><circle cx="1104" cy="93" r="2"/><circle cx="1070" cy="270" r="1.5"/><circle cx="554" cy="539" r="2"/><circle cx="240" cy="478" r="1.6"/><circle cx="746" cy="128" r="2"/><circle cx="493" cy="220" r="1.5"/><circle cx="1140" cy="485" r="2"/></g>
+  <g fill="#bcaaff" font-family="sans-serif"><text x="68" y="252" font-size="24">✦</text><text x="550" y="164" font-size="15">✦</text><text x="1138" y="204" font-size="20">✧</text><text x="72" y="418" font-size="17">✧</text></g>
+  <g transform="translate(78 73)">
+    <rect width="42" height="42" rx="14" fill="#332b52" stroke="#70639c"/>
+    <path d="M25 9a13 13 0 1 0 8 22A11 11 0 0 1 25 9Z" fill="#ffd0e4"/>
+    <text x="56" y="28" fill="#f6f0ff" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="-.5">midnight.server</text>
+  </g>
+  <rect x="78" y="146" width="250" height="30" rx="15" fill="#34294f" stroke="#5c4b80"/>
+  <circle cx="96" cy="161" r="4" fill="#ff9fc7"/>
+  <text x="109" y="165" fill="#e1d3ff" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.1">OUR LITTLE CODING CORNER</text>
+  <text x="78" y="262" fill="#fbf7ff" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700" letter-spacing="-3">Let’s make</text>
+  <text x="78" y="344" fill="url(#pink)" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700" letter-spacing="-3">good things.</text>
+  <text x="82" y="399" fill="#c5bfdc" font-family="Arial, sans-serif" font-size="19">A thoughtful little home for building with AI,</text>
+  <text x="82" y="428" fill="#c5bfdc" font-family="Arial, sans-serif" font-size="19">right here in our terminal.</text>
+  <g transform="translate(82 477)"><circle cx="7" cy="7" r="6" fill="#94d2ff"/><text x="23" y="12" fill="#c2b8df" font-family="Arial, sans-serif" font-size="14">Open source</text><circle cx="151" cy="7" r="6" fill="#bba6ff"/><text x="167" y="12" fill="#c2b8df" font-family="Arial, sans-serif" font-size="14">Pre-release</text></g>
+  <g filter="url(#shadow)">
+    <rect x="644" y="184" width="476" height="287" rx="19" fill="#111120" stroke="#655482" stroke-width="2"/>
+    <path d="M663 184h438a19 19 0 0 1 19 19v38H644v-38a19 19 0 0 1 19-19Z" fill="#25213d"/>
+    <circle cx="671" cy="216" r="6" fill="#ff9aad"/><circle cx="692" cy="216" r="6" fill="#ffd27e"/><circle cx="713" cy="216" r="6" fill="#90e3bd"/>
+    <text x="882" y="220" text-anchor="middle" fill="#c7bedf" font-family="Consolas, monospace" font-size="13">midnight.server</text>
+    <text x="680" y="290" fill="#a9d3ff" font-family="Consolas, monospace" font-size="19">❯</text>
+    <text x="710" y="290" fill="#f5efff" font-family="Consolas, monospace" font-size="19">build a website</text>
+    <text x="680" y="330" fill="#a9d3ff" font-family="Consolas, monospace" font-size="19">❯</text>
+    <text x="710" y="330" fill="#ffacd0" font-family="Consolas, monospace" font-size="19">and make it pink!</text>
+    <text x="680" y="375" fill="#aaa2c7" font-family="Consolas, monospace" font-size="14">adding our blue &amp; purple sparkle...</text>
+    <circle cx="689" cy="414" r="8" fill="#91e5bb"/><path d="m685 414 3 3 6-7" fill="none" stroke="#152a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="710" y="419" fill="#d6d0ea" font-family="Consolas, monospace" font-size="14">making something lovely together</text>
+  </g>
+  <circle cx="1042" cy="540" r="51" fill="url(#sun)"/>
+  <path d="M970 548c8-23 38-25 53-9 15-28 54-24 65 2 22-5 38 6 44 20H959c0-6 4-10 11-13Z" fill="#899bcf"/>
+  <path d="M994 559c10-17 30-17 42-4 15-19 42-17 52 3 13-5 26 1 30 10H987c0-4 3-7 7-9Z" fill="#aebbe4"/>
+  <text x="78" y="575" fill="#8d84ad" font-family="Arial, sans-serif" font-size="13" letter-spacing="1">A LITTLE MORE MAKING, A LITTLE LESS BUSYWORK</text>
+</svg>
