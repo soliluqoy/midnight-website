@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Midnight server</title>
+  <desc id="desc">A cozy midnight-themed terminal window with a glowing moon and a ready prompt.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10172a"/><stop offset="1" stop-color="#1b1740"/>
+    </linearGradient>
+    <linearGradient id="moon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8e6ff"/><stop offset="1" stop-color="#91a8ff"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" rx="36" fill="url(#bg)"/>
+  <circle cx="1000" cy="155" r="106" fill="#8b9cff" opacity=".16" filter="url(#glow)"/>
+  <circle cx="1000" cy="155" r="69" fill="url(#moon)"/>
+  <circle cx="1032" cy="130" r="66" fill="#171735"/>
+  <g fill="#cbd7ff" opacity=".75">
+    <circle cx="865" cy="100" r="2.5"/><circle cx="1100" cy="285" r="2"/><circle cx="925" cy="310" r="3"/>
+    <circle cx="1080" cy="65" r="2"/><circle cx="800" cy="220" r="2"/><circle cx="1135" cy="190" r="2.5"/>
+  </g>
+  <rect x="100" y="140" width="1000" height="470" rx="18" fill="#0b0d17" stroke="#42466b" stroke-width="2"/>
+  <path d="M118 140h964a18 18 0 0 1 18 18v48H100v-48a18 18 0 0 1 18-18z" fill="#20243a"/>
+  <circle cx="134" cy="174" r="7" fill="#ff6f7d"/><circle cx="160" cy="174" r="7" fill="#ffc86b"/><circle cx="186" cy="174" r="7" fill="#70d7a8"/>
+  <text x="600" y="180" text-anchor="middle" fill="#aeb5d2" font-family="Segoe UI, sans-serif" font-size="16">midnight.server</text>
+  <text x="150" y="275" fill="#dce3ff" font-family="Segoe UI, sans-serif" font-size="42" font-weight="600">A little space to think.</text>
+  <text x="150" y="320" fill="#929bbd" font-family="Segoe UI, sans-serif" font-size="20">Your ideas, tools, and code—together after dark.</text>
+  <text x="150" y="390" fill="#91a8ff" font-family="Cascadia Code, Consolas, monospace" font-size="19">$ midnight.server</text>
+  <text x="150" y="435" fill="#a9b4d7" font-family="Cascadia Code, Consolas, monospace" font-size="18">Ready when you are.</text>
+  <rect x="150" y="476" width="11" height="28" rx="2" fill="#aebdff">
+    <animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+  <path d="M100 555h1000" stroke="#282c46"/>
+  <text x="150" y="585" fill="#757e9e" font-family="Segoe UI, sans-serif" font-size="14">MIDNIGHT  ·  BUILD SOMETHING GOOD</text>
+  <text x="1050" y="585" text-anchor="end" fill="#757e9e" font-family="Segoe UI, sans-serif" font-size="14">v0.87.1</text>
+</svg>
