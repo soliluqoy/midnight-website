@@ -58,34 +58,53 @@
     .peek-window{position:absolute;left:7%;top:13%;width:42%;height:44%;border-radius:8px;background:#1f2026;border:1px solid #3b3c46;box-shadow:0 14px 30px #0008}.peek-window:before{content:"";display:block;height:14%;background:#2a2b33;border-radius:8px 8px 0 0}.peek-frame{position:absolute;left:12%;top:30%;width:26%;height:12%;border:1.5px dashed #bba9ff;border-radius:6px;background:#8068e814}.peek-cursor{position:absolute;left:36%;top:40%;width:0;height:0;border-left:7px solid #bba9ff;border-top:5px solid transparent;border-bottom:5px solid transparent;transform:rotate(-120deg)}.peek-play{position:absolute;left:24%;bottom:17%;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:99px;background:#8068e8;color:#fff;font-size:12px;font-weight:700;box-shadow:0 8px 22px #8068e84a}
     @media(max-width:760px){.desk-grid{grid-template-columns:1fr;gap:28px}.peek-panel{font-size:8px;padding:8px}.peek-head{font-size:9px}.peek-play{left:5%;font-size:11px}}
     @media(max-width:760px){.nav-links{background:#19182d;border-color:#3c3658}.sunrise{left:50px}.cloud-one{left:23px}.cloud-two{right:10px}}
+
+    .strip-lead{display:block}
+    .install-links{display:flex;align-items:center;justify-content:center;gap:9px;margin:15px 0 0;color:#aaa6bd;font-size:11px}
+    .install-links a{color:#c3adff;font-weight:700}
+    .safety{max-width:740px;margin:24px auto 0;border:1px solid #393452;border-radius:12px;background:#17162a;color:#aaa6bd;font-size:11px}
+    .safety summary{padding:12px 14px;color:#f4d0e7;font-weight:700;cursor:pointer;list-style-position:inside}
+    .safety p{margin:0;padding:0 14px 13px;line-height:1.7}
+    /* Small usability details: keep the interface calm, but make it easier to use. */
+    :focus-visible{outline:2px solid var(--pink);outline-offset:4px}
+    .skip-link{position:fixed;left:16px;top:12px;z-index:30;padding:10px 14px;border-radius:9px;background:var(--pink);color:#24182e;font-size:12px;font-weight:800;transform:translateY(-150%);transition:transform .2s}
+    .skip-link:focus{transform:translateY(0)}
+    header.nav{position:sticky;top:0;z-index:20;background:#0c1020eF;backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .2s,background .2s}
+    header.nav.is-scrolled{border-color:#34314e;background:#0c1020f5}
+    .nav-links a[aria-current="page"]{color:var(--pink)}
+    .button,.nav-cta,.copy,.platform,.menu-toggle,.peek{touch-action:manipulation}
+    .command code{min-width:0}
+    .copy{white-space:nowrap}
+    @media(max-width:760px){header.nav{width:100%;padding-left:18px;padding-right:18px}.command{align-items:flex-start}.command code{line-height:1.55}.copy{margin-top:1px}.install-links{flex-wrap:wrap}.install-separator{display:none}.footer-right{flex-wrap:wrap;justify-content:flex-end}}
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to content</a>
   <header class="wrap nav">
     <a class="brand" href="#top" aria-label="midnight.server home"><span class="brand-mark" aria-hidden="true">☾</span>midnight.server</a>
-    <nav class="nav-links" id="navLinks" aria-label="Main navigation"><a href="#harness">Our little helper</a><a href="#features">How we work</a><a href="#desktop">Desktop app</a><a href="#install">Come on in</a><a href="https://github.com/soliluqoy/midnight.server">GitHub ↗</a></nav>
-    <a class="nav-cta" href="#install">Come on in <span>↗</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation"><a href="#harness">Features</a><a href="#features">How it works</a><a href="#desktop">Desktop app</a><a href="#install">Install</a><a href="https://github.com/soliluqoy/midnight.server">GitHub ↗</a></nav>
+    <a class="nav-cta" href="#install">Install midnight <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
   </header>
-  <main id="top">
+  <main id="top" tabindex="-1">
     <section class="hero"><div class="wrap hero-grid"><div>
-      <span class="eyebrow"><i></i> OUR LITTLE CODING CORNER <span style="opacity:.65">·</span> PRE-RELEASE</span>
+      <span class="eyebrow"><i></i> AI CODING, WITH CONTEXT <span style="opacity:.65">·</span> PRE-RELEASE</span>
       <h1>Let’s make<br><em>good things.</em></h1>
-      <p class="hero-copy">we made midnight.server to feel like a thoughtful little home for building with AI in your terminal. Our built-in harness helps the model get to know our project, catches certain mistakes as we work, and runs project checks before we call a change done.</p>
-      <div class="hero-actions"><a class="button" href="#install">Make yourself at home <span>→</span></a><a class="text-link" href="https://github.com/soliluqoy/midnight.server">Take a peek inside <span>↗</span></a></div>
-      <div class="pre-note">we’re pre-release, open source, and here for Windows, Linux, and Apple silicon macOS. New: <a href="#desktop" style="color:var(--pink);font-weight:700">midnight.app for your desktop →</a></div>
+      <p class="hero-copy">An open-source AI coding assistant that understands your project, catches common mistakes, and checks its work before you call a change done.</p>
+      <div class="hero-actions"><a class="button" href="#install">Install midnight.server <span>→</span></a><a class="text-link" href="https://github.com/soliluqoy/midnight.server">Explore the source <span>↗</span></a></div>
+      <div class="pre-note">Pre-release, open source, and available for Windows, Linux, and Apple silicon macOS. <a href="#desktop" style="color:var(--pink);font-weight:700">Meet midnight.app →</a></div>
     </div><div class="scene" aria-label="A coding terminal under a crescent moon">
       <div class="moon-halo"></div><div class="sunrise" aria-hidden="true"></div><div class="cloud cloud-one" aria-hidden="true"></div><div class="cloud cloud-two" aria-hidden="true"></div><div class="moon" aria-hidden="true">🌙</div><span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✧</span><span class="star s4">✦</span>
       <div class="terminal"><div class="terminal-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="terminal-title">midnight.server</span></div><div class="terminal-body"><div><span class="prompt">❯</span> build a website</div><div><span class="prompt">❯</span> and make it pink!</div><div class="dim">adding our blue &amp; purple sparkle...</div><div><span class="good">✓</span> making something lovely together<span class="cursor"></span></div></div></div>
       <div class="terminal-label">✦ &nbsp;your repo, your workflow</div>
     </div></div></section>
-    <div class="strip wrap">A little less busywork, a little more making<div class="strip-items"><span><b>⌕</b> Context before the first request</span><span><b>✓</b> Checks as you work</span><span><b>⌘</b> Native PowerShell on Windows</span></div></div>
-    <section class="content features" id="harness"><div class="wrap"><div class="section-head"><span class="kicker">Meet our built-in helper</span><h2>we’ll take care of the fiddly bits.</h2><p>we built the harness to handle more of the exploring and rechecking for us, so we can spend fewer model turns on busywork and more time making the thing we came here to make.</p></div><div class="cards">
-      <article class="card"><div class="icon">🧭</div><h3>we start with context</h3><p>Before the first request, we find relevant files, pair tests with their sources, and bundle useful project details for the model working alongside us.</p></article>
-      <article class="card"><div class="icon">🩹</div><h3>we catch little slip-ups</h3><p>Syntax checks, edit repairs, path hints, and language-server diagnostics help us spot common problems right where they happen.</p></article>
-      <article class="card"><div class="icon">🛟</div><h3>we check before we call it done</h3><p>Our project checks run in a staged ladder. If the same checks fail twice, the harness can roll back files the agent edited to a passing checkpoint.</p></article>
+    <div class="strip wrap"><span class="strip-lead">A little less busywork, a little more making</span><div class="strip-items"><span><b>⌕</b> Project context first</span><span><b>✓</b> Checks as you work</span><span><b>⌘</b> Windows, Linux, and macOS</span><span><b>✦</b> MIT licensed</span></div></div>
+    <section class="content features" id="harness"><div class="wrap"><div class="section-head"><span class="kicker">Built-in project harness</span><h2>Less busywork. More making.</h2><p>midnight.server handles more of the exploring and rechecking, so your model can spend its turns solving the problem instead of rediscovering the project.</p></div><div class="cards">
+      <article class="card"><div class="icon">🧭</div><h3>Context before the first request</h3><p>Relevant files, tests, and project details are gathered before the model starts, giving it a useful map of the work.</p></article>
+      <article class="card"><div class="icon">🩹</div><h3>Helpful checks while you work</h3><p>Syntax checks, edit repairs, path hints, and diagnostics catch common problems close to where they happen.</p></article>
+      <article class="card"><div class="icon">🛟</div><h3>A passing checkpoint before done</h3><p>Project checks run in stages, with a rollback checkpoint available when repeated failures need a clean reset.</p></article>
     </div></div></section>
-    <section class="content" id="features"><div class="wrap how-grid"><div class="how-intro"><span class="kicker">Our workbench, all tidied up</span><h2>we keep the whole project in view.</h2><p>we can start by exploring in read-only plan mode, then switch to build mode when we’re ready to make changes. Our sidebar keeps our model, context, git status, and session edits close at hand.</p><p>Looking for a symbol? we ask <code>lookup</code> where it lives and who uses it. Got a side question? we open a thread without pulling the main agent off course.</p></div><div class="steps"><article class="step"><span class="step-num">01</span><div><h3>we look around first</h3><p>In plan mode, our agent can inspect the workspace with read-only tools and lay out a step-by-step plan.</p></div></article><article class="step"><span class="step-num">02</span><div><h3>we build with guardrails</h3><p>Syntax checks run after edits, and our configured or detected project checks help us verify the changes.</p></div></article><article class="step"><span class="step-num">03</span><div><h3>we can see what changed</h3><p>Session titles, file summaries, model details, and context usage help us keep the shape of longer work in view.</p></div></article></div></div></section>
+    <section class="content" id="features"><div class="wrap how-grid"><div class="how-intro"><span class="kicker">A focused workbench</span><h2>Keep the whole project in view.</h2><p>Start in read-only plan mode, then switch to build mode when you’re ready. Your model, context, git status, and session edits stay close at hand.</p><p>Looking for a symbol? Ask <code>lookup</code> where it lives and who uses it. Need a side question? Open a thread without pulling the main agent off course.</p></div><div class="steps"><article class="step"><span class="step-num">01</span><div><h3>Look around first</h3><p>In plan mode, our agent can inspect the workspace with read-only tools and lay out a step-by-step plan.</p></div></article><article class="step"><span class="step-num">02</span><div><h3>Build with guardrails</h3><p>Syntax checks run after edits, and our configured or detected project checks help us verify the changes.</p></div></article><article class="step"><span class="step-num">03</span><div><h3>See what changed</h3><p>Session titles, file summaries, model details, and context usage help us keep the shape of longer work in view.</p></div></article></div></div></section>
     <section class="content desktop" id="desktop"><div class="wrap desk-grid"><div class="desk-intro">
       <span class="kicker">New · midnight.app v0.1.0</span>
       <h2>midnight is on your desktop now.</h2>
@@ -95,7 +114,7 @@
         <li><b>✓</b><span><strong>It asks before anything leaves your computer.</strong> Tasks that act show a plan first, and sending, posting or deleting waits for your OK. Esc stops everything.</span></li>
         <li><b>⌕</b><span><strong>It answers with sources.</strong> It searches and reads pages in parallel, and every <code>[n]</code> citation links back to where it came from.</span></li>
       </ul>
-      <div class="install-box desk-install"><div class="platforms" role="tablist" aria-label="Choose your operating system for the desktop app"><button class="platform active" role="tab" aria-selected="true" data-app="windows">Windows</button><button class="platform" role="tab" aria-selected="false" data-app="unix">macOS</button><button class="platform" role="tab" aria-selected="false" data-app="unix">Linux</button></div><div class="command"><code id="appCommand">irm https://raw.githubusercontent.com/soliluqoy/midnight.app/main/install.ps1 | iex</code><button class="copy" id="copyApp" type="button">Copy</button></div><p class="install-hint" id="appHint">Run in PowerShell. Windows x64, per-user, no admin needed. <a href="https://github.com/soliluqoy/midnight.app/releases/latest">Downloads and release notes ↗</a></p></div>
+      <div class="install-box desk-install"><div class="platforms" role="tablist" aria-label="Choose your operating system for the desktop app"><button type="button" class="platform active" id="app-windows-tab" role="tab" aria-selected="true" aria-controls="appPanel" data-app="windows">Windows</button><button type="button" class="platform" id="app-macos-tab" role="tab" aria-selected="false" aria-controls="appPanel" data-app="macos">macOS</button><button type="button" class="platform" id="app-linux-tab" role="tab" aria-selected="false" aria-controls="appPanel" data-app="linux">Linux</button></div><div class="command" id="appPanel" role="tabpanel" aria-labelledby="app-windows-tab"><code id="appCommand" aria-live="polite">irm https://raw.githubusercontent.com/soliluqoy/midnight.app/main/install.ps1 | iex</code><button class="copy" id="copyApp" type="button" aria-label="Copy desktop app installation command">Copy</button></div><p class="install-hint" id="appHint" aria-live="polite">Run in PowerShell. Windows x64, per-user, no admin needed. <a href="https://github.com/soliluqoy/midnight.app/releases/latest">Downloads and release notes ↗</a></p></div>
       <p class="desk-note">Builds are unsigned for now, and desktop control (computer use) is Windows-only. Run the installer again to update. <a href="desktop/">Watch the two-minute walkthrough →</a></p>
     </div>
     <a class="peek" href="desktop/" aria-label="Watch the desktop app walkthrough">
@@ -104,10 +123,10 @@
         <span class="peek-steps"><span class="ok"><i></i>Find the newest sales sheet</span><span class="now"><i></i>Check it against the CRM</span><span><i></i>Chart Q3 by region</span><span class="ask"><i></i>Draft email · asks you first</span></span></span>
       <span class="peek-play">▶ Play</span><span class="peek-bar"></span>
     </a></div></section>
-    <section class="content install" id="install"><div class="wrap"><div class="section-head"><span class="kicker">Come on in</span><h2>Let’s get our little corner set up.</h2><p>Pick your platform and we’ll show you the install command. Then we can start midnight.server and sign in with <code>/login</code> or set an API key for your model provider.</p></div><div class="install-box"><div class="platforms" role="tablist" aria-label="Choose your operating system"><button class="platform active" role="tab" aria-selected="true" data-platform="windows">Windows</button><button class="platform" role="tab" aria-selected="false" data-platform="unix">Linux</button><button class="platform" role="tab" aria-selected="false" data-platform="unix">macOS</button></div><div class="command"><code id="installCommand">irm https://raw.githubusercontent.com/soliluqoy/midnight.server/main/scripts/get.ps1 | iex</code><button class="copy" id="copyCommand" type="button">Copy</button></div><p class="install-hint" id="installHint">Run in PowerShell. Requires Windows 10 or 11 (x64). <a href="https://github.com/soliluqoy/midnight.server#install">Other install options and details ↗</a></p></div><p class="fineprint"><strong>A small, honest note from us:</strong> we’re still pre-release, and we haven’t measured the harness against stronger models yet. Shell tools run with the permissions of the user running midnight.server; nothing is sandboxed. When escalation is active, our request, diff, and failing output may be sent to the configured advisor model provider.</p></div></section>
+    <section class="content install" id="install"><div class="wrap"><div class="section-head"><span class="kicker">Get started</span><h2>Start building in a few minutes.</h2><p>Choose your platform, run one command, then start midnight.server and sign in with <code>/login</code> or an API key from your model provider.</p></div><div class="install-box"><div class="platforms" role="tablist" aria-label="Choose your operating system"><button type="button" class="platform active" id="install-windows-tab" role="tab" aria-selected="true" aria-controls="installPanel" data-platform="windows">Windows</button><button type="button" class="platform" id="install-linux-tab" role="tab" aria-selected="false" aria-controls="installPanel" data-platform="linux">Linux</button><button type="button" class="platform" id="install-macos-tab" role="tab" aria-selected="false" aria-controls="installPanel" data-platform="macos">macOS</button></div><div class="command" id="installPanel" role="tabpanel" aria-labelledby="install-windows-tab"><code id="installCommand" aria-live="polite">irm https://raw.githubusercontent.com/soliluqoy/midnight.server/main/scripts/get.ps1 | iex</code><button class="copy" id="copyCommand" type="button" aria-label="Copy installation command">Copy</button></div><p class="install-hint" id="installHint" aria-live="polite">Run in PowerShell. Requires Windows 10 or 11 (x64). <a href="https://github.com/soliluqoy/midnight.server#install">Other install options and details ↗</a></p></div><div class="install-links"><span>Prefer a download?</span><a href="https://github.com/soliluqoy/midnight.server/releases">Browse releases ↗</a><span class="install-separator">·</span><a href="https://github.com/soliluqoy/midnight.server#install">Read the install guide ↗</a></div><details class="safety"><summary>Before you run it: a small, honest note</summary><p>midnight.server is pre-release software. Shell tools run with the permissions of the user running it; nothing is sandboxed. When escalation is active, your request, diff, and failing output may be sent to the configured advisor model provider.</p></details></div></section>
     <section class="closing"><div class="wrap"><div class="closing-box"><h2>There’s room for you here.</h2><p>we’re building in the open, one thoughtful little step at a time. Come have a look around.</p><a class="button" href="https://github.com/soliluqoy/midnight.server">Come say hello on GitHub <span>↗</span></a></div></div></section>
   </main>
-  <footer class="footer"><div class="wrap footer-row"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">☾</span>midnight.server</a><span>Made with care, built from Pi · MIT licensed</span><div class="footer-right"><a href="https://github.com/soliluqoy/midnight.server">GitHub</a><a href="https://github.com/soliluqoy/midnight.server/releases">Releases</a><a href="https://github.com/soliluqoy/midnight.app">Desktop app</a><a href="https://github.com/soliluqoy/midnight.server/blob/main/README.md">Docs</a></div></div></footer>
+  <footer class="footer"><div class="wrap footer-row"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">☾</span>midnight.server</a><span>Open source · MIT licensed · pre-release</span><div class="footer-right"><a href="https://github.com/soliluqoy/midnight.server">GitHub</a><a href="https://github.com/soliluqoy/midnight.server/releases">Releases</a><a href="https://github.com/soliluqoy/midnight.app">Desktop app</a><a href="https://github.com/soliluqoy/midnight.server/issues">Issues</a><a href="https://github.com/soliluqoy/midnight.server/blob/main/README.md">Docs</a></div></div></footer>
   <script>
     const toggle = document.querySelector('#menuToggle');
     const links = document.querySelector('#navLinks');
@@ -117,13 +136,34 @@
       toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
       toggle.textContent = open ? '×' : '☰';
     });
-    links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    function closeMenu() {
       links.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
       toggle.setAttribute('aria-label', 'Open navigation');
       toggle.textContent = '☰';
-    }));
+    }
+    links.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+    document.addEventListener('click', event => {
+      if (links.classList.contains('open') && !links.contains(event.target) && event.target !== toggle) closeMenu();
+    });
     const command = document.querySelector('#installCommand');
+    const header = document.querySelector('header.nav');
+    const sectionLinks = [...links.querySelectorAll('a[href^="#"]')];
+    const sections = sectionLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          sectionLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${entry.target.id}`) link.setAttribute('aria-current', 'page');
+            else link.removeAttribute('aria-current');
+          });
+        });
+      }, { rootMargin: '-25% 0px -65% 0px' });
+      sections.forEach(section => observer.observe(section));
+    }
+    window.addEventListener('scroll', () => header.classList.toggle('is-scrolled', window.scrollY > 8), { passive: true });
     const hint = document.querySelector('#installHint');
     const windowsCommand = 'irm https://raw.githubusercontent.com/soliluqoy/midnight.server/main/scripts/get.ps1 | iex';
     const unixCommand = 'curl -fsSL https://raw.githubusercontent.com/soliluqoy/midnight.server/main/scripts/get.sh | sh';
@@ -136,42 +176,72 @@
       document.querySelectorAll('[data-platform]').forEach(tab => { tab.classList.remove('active'); tab.setAttribute('aria-selected', 'false'); });
       button.classList.add('active');
       button.setAttribute('aria-selected', 'true');
-      const platform = index === 0 ? 'windows' : index === 1 ? 'linux' : 'macos';
+      const platform = button.dataset.platform;
       command.textContent = platform === 'windows' ? windowsCommand : unixCommand;
+      command.parentElement.setAttribute('aria-labelledby', button.id);
       hint.innerHTML = `${hints[platform]} <a href="https://github.com/soliluqoy/midnight.server#install">Other install options and details ↗</a>`;
       document.querySelector('#copyCommand').textContent = 'Copy';
+      document.querySelector('#copyCommand').setAttribute('aria-label', 'Copy installation command');
     }));
-    document.querySelector('#copyCommand').addEventListener('click', async event => {
+    async function copyText(text, button) {
+      const defaultLabel = button.dataset.defaultLabel || button.getAttribute('aria-label') || 'Copy';
+      button.dataset.defaultLabel = defaultLabel;
       try {
-        await navigator.clipboard.writeText(command.textContent);
-        event.currentTarget.textContent = 'Copied';
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const field = document.createElement('textarea');
+          field.value = text;
+          field.setAttribute('readonly', '');
+          field.style.position = 'fixed';
+          field.style.opacity = '0';
+          document.body.appendChild(field);
+          field.select();
+          if (!document.execCommand('copy')) throw new Error('copy failed');
+          field.remove();
+        }
+        button.textContent = 'Copied';
+        button.setAttribute('aria-label', 'Copied to clipboard');
+        window.setTimeout(() => { button.textContent = 'Copy'; button.setAttribute('aria-label', defaultLabel); }, 1800);
       } catch {
-        event.currentTarget.textContent = 'Select to copy';
+        button.textContent = 'Copy failed';
+        button.setAttribute('aria-label', 'Copy failed');
+        window.setTimeout(() => { button.textContent = 'Copy'; button.setAttribute('aria-label', defaultLabel); }, 1800);
       }
-    });
+    }
+    document.querySelector('#copyCommand').addEventListener('click', event => copyText(command.textContent, event.currentTarget));
     const appCommand = document.querySelector('#appCommand');
     const appHint = document.querySelector('#appHint');
     const appCommands = {
       windows: 'irm https://raw.githubusercontent.com/soliluqoy/midnight.app/main/install.ps1 | iex',
-      unix: 'curl -fsSL https://raw.githubusercontent.com/soliluqoy/midnight.app/main/install.sh | sh'
+      macos: 'curl -fsSL https://raw.githubusercontent.com/soliluqoy/midnight.app/main/install.sh | sh',
+      linux: 'curl -fsSL https://raw.githubusercontent.com/soliluqoy/midnight.app/main/install.sh | sh'
     };
-    const appHints = ['Run in PowerShell. Windows x64, per-user, no admin needed.', 'Run in a terminal. macOS on Apple silicon (M1 or later).', 'Run in a terminal. Linux x86_64, installed as an AppImage.'];
-    document.querySelectorAll('[data-app]').forEach((button, index) => button.addEventListener('click', () => {
+    const appHints = {
+      windows: 'Run in PowerShell. Windows x64, per-user, no admin needed.',
+      macos: 'Run in a terminal. macOS on Apple silicon (M1 or later).',
+      linux: 'Run in a terminal. Linux x86_64, installed as an AppImage.'
+    };
+    document.querySelectorAll('[data-app]').forEach(button => button.addEventListener('click', () => {
       document.querySelectorAll('[data-app]').forEach(tab => { tab.classList.remove('active'); tab.setAttribute('aria-selected', 'false'); });
       button.classList.add('active');
       button.setAttribute('aria-selected', 'true');
       appCommand.textContent = appCommands[button.dataset.app];
-      appHint.innerHTML = `${appHints[index]} <a href="https://github.com/soliluqoy/midnight.app/releases/latest">Downloads and release notes ↗</a>`;
+      appHint.innerHTML = `${appHints[button.dataset.app]} <a href="https://github.com/soliluqoy/midnight.app/releases/latest">Downloads and release notes ↗</a>`;
+      appCommand.parentElement.setAttribute('aria-labelledby', button.id);
       document.querySelector('#copyApp').textContent = 'Copy';
+      document.querySelector('#copyApp').setAttribute('aria-label', 'Copy desktop app installation command');
     }));
-    document.querySelector('#copyApp').addEventListener('click', async event => {
-      try {
-        await navigator.clipboard.writeText(appCommand.textContent);
-        event.currentTarget.textContent = 'Copied';
-      } catch {
-        event.currentTarget.textContent = 'Select to copy';
-      }
-    });
+    document.querySelector('#copyApp').addEventListener('click', event => copyText(appCommand.textContent, event.currentTarget));
+    document.querySelectorAll('[role="tab"]').forEach(tab => tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const tabs = [...tab.parentElement.querySelectorAll('[role="tab"]')];
+      const current = tabs.indexOf(tab);
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (current + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus();
+      tabs[next].click();
+    }));
   </script>
 </body>
 </html>

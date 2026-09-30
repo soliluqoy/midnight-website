@@ -404,16 +404,21 @@ a.brand{color:inherit;text-decoration:none}.top .home{font:600 13px 'DM Sans',sa
 .final p{font:13px 'DM Mono',monospace;color:var(--muted);letter-spacing:1.5px;margin:24px 0 26px}
 .final button{border:0;border-radius:99px;padding:13px 22px;background:var(--purple);font-weight:800;font-size:15px;box-shadow:0 10px 28px rgba(128,104,232,.4)}
 @media (prefers-reduced-motion:reduce){.dot,.ring span:before{animation:none}}
+.skip-link{position:fixed;left:20px;top:14px;z-index:2000;padding:9px 13px;border-radius:9px;background:var(--pink);color:#24182e;font-weight:800;text-decoration:none;transform:translateY(-160%);transition:transform .2s}.skip-link:focus{transform:translateY(0)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+@media(max-width:600px){.wrap{padding-left:14px;padding-right:14px}.top .meta{order:3;flex-basis:100%;margin-left:0}.top{margin-bottom:14px}.monitor{padding:6px;border-radius:14px}.controls{gap:7px}.toggles{width:100%}.tog{flex:1;justify-content:center}.caption h2{font-size:34px}.caption p.sub{font-size:15px}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#walkthrough">Skip to walkthrough</a>
 <div class="wrap">
   <header class="top">
     <a class="brand" href="../" aria-label="midnight.server home"><span class="brand-mark" aria-hidden="true">☾</span>midnight.server</a>
     <div class="meta">DESKTOP CONCEPT · WALKTHROUGH</div><a class="home" href="../">← Back home</a>
   </header>
 
-  <div class="monitor"><div class="screen" id="screen"><div class="paused-tag">❚❚ paused</div><button class="unmute" id="unmute" type="button"><svg viewBox="0 0 16 16"><path d="M2 6h3l4-3v10L5 10H2zM11 5.5a3.5 3.5 0 0 1 0 5M12.5 3.5a6 6 0 0 1 0 9" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M2 6h3l4-3v10L5 10H2z"/></svg>Turn on voice and sound</button>
+  <main id="walkthrough" tabindex="-1">
+  <div class="monitor"><div class="screen" id="screen" role="region" aria-label="Interactive midnight.app walkthrough"><div class="paused-tag">❚❚ paused</div><button class="unmute" id="unmute" type="button"><svg viewBox="0 0 16 16"><path d="M2 6h3l4-3v10L5 10H2zM11 5.5a3.5 3.5 0 0 1 0 5M12.5 3.5a6 6 0 0 1 0 9" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M2 6h3l4-3v10L5 10H2z"/></svg>Turn on voice and sound</button>
   <div class="stage" id="stage">
     <div class="wall"></div>
     <canvas id="stars" width="1600" height="900"></canvas>
@@ -643,6 +648,7 @@ a.brand{color:inherit;text-decoration:none}.top .home{font:600 13px 'DM Sans',sa
   </details>
 
   <p class="foot-note"><span>midnight.app v0.1.0 is <a href="https://github.com/soliluqoy/midnight.app#install" style="color:#c3adff">out now for Windows, macOS and Linux ↗</a>. This walkthrough is still a concept: the desktop, apps, CRM, sources and figures are illustrative, and connected apps and running several tasks at once aren’t built yet. Narration is pre-recorded with the open-source Kokoro voice model (voice: Heart).</span><span><kbd>Space</kbd> play or pause · <kbd>←</kbd> <kbd>→</kbd> chapters</span></p>
+  </main>
 </div>
 
 <script>
